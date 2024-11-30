@@ -1,3 +1,4 @@
+import { AppProvider } from "../../Context";
 import { ComponenteBasico } from "../Components/ComponenteBasico";
 import { ComponenteConEfectos } from "../Components/ComponenteConEfectos";
 import { ComponenteConEstados } from "../Components/ComponenteConEstados";
@@ -7,21 +8,23 @@ import "./App.css";
 
 const App = () => {
     return(
-        <div>
-            <p>Hola, esta es mi primera pagina web con React.js</p>
-            <ComponenteBasico/>
+        <AppProvider>
+            <div>
+                <p>Hola, esta es mi primera pagina web con React.js</p>
+                <ComponenteBasico/>
 
-            <ComponenteConPropiedades/>
-            
-            <ComponenteConPropiedades 
-                nombre={"Carlos Patiño"} 
-                correo={"correo2.propiedades@email.com"}
-            />
+                <ComponenteConPropiedades/>
+                
+                <ComponenteConPropiedades 
+                    nombre={"Carlos Patiño"} 
+                    correo={"correo2.propiedades@email.com"}
+                />
 
-            <ComponenteConEstados/>
+                <ComponenteConEstados/>
 
-            <ComponenteConEfectos/>
-        </div>
+                <ComponenteConEfectos/>
+            </div>
+        </AppProvider>
     )
 }
 
