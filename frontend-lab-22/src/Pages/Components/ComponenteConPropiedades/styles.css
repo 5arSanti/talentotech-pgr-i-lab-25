@@ -1,0 +1,11 @@
+.properties-component {
+    width: 100%;
+    padding: 30px;
+    background-color: beige;
+    margin: 20px;
+    h1 {
+        color: var(--title-color);
+    } & p {
+        color: var(--text-color);
+    }
+}

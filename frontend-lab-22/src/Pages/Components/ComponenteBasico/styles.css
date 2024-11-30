@@ -1,0 +1,13 @@
+.basic-component-container {
+    width: 100%;
+    padding: 30px;
+    background-color: beige;
+}
+.basic-component-container  {
+    h1 {
+        font-family: Calibri;
+        color: var(--title-color);
+    } & p {
+        color: var(--text-color);
+    }
+}
