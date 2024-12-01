@@ -45,7 +45,7 @@ app.get("/users", (requeset, response) => {
     }
 })
 
-app.get("noticias", (request, response) => {
+app.get("/noticias", (request, response) => {
     try {
         const noticias = [{
             titulo: "Descubren nueva especie de dinosaurio",

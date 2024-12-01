@@ -6,15 +6,19 @@ const AppContext = React.createContext();
 
 const AppProvider = ({children}) => {
     const [responseData, setResponseData] = React.useState(null);
+    const [noticias, setNoticias] = React.useState(null);
 
     React.useEffect(() => {
         handleFetch("users", setResponseData)
+        handleFetch("noticias", setNoticias)
     }, [])
 
     return(
         <AppContext.Provider value={{
             responseData,
-            setResponseData
+            setResponseData,
+            noticias,
+            setNoticias
         }}>
             {children}
         </AppContext.Provider>
